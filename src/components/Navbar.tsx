@@ -31,28 +31,40 @@ function Navbar() {
           </div>
           <ul className="hidden xl:flex items-center gap-[36px]">
             <li>
-              <Link
+              <NavLink
                 to="/"
-                className="text-[18px] text-primary font-poppins font-medium"
+                className={({ isActive }) =>
+                  `text-[18px] text-primary font-poppins font-medium ${
+                    isActive ? "underline" : ""
+                  }`
+                }
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/menu"
-                className="text-[18px] text-primary font-poppins font-medium"
+                className={({ isActive }) =>
+                  `text-[18px] text-primary font-poppins font-medium ${
+                    isActive ? "underline" : ""
+                  }`
+                }
               >
                 Menu
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/contact"
-                className="text-[18px] text-primary font-poppins font-medium"
+                className={({ isActive }) =>
+                  `text-[18px] text-primary font-poppins font-medium ${
+                    isActive ? "underline" : ""
+                  }`
+                }
               >
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <button
