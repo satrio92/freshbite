@@ -91,9 +91,11 @@ function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive
-                ? "block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
-                : "bg-none"
+              `block w-screen font-poppins font-medium text-center py-4 ${
+                isActive
+                  ? "bg-gradient-to-r from-primary/50 via-primary to-primary/50 text-base"
+                  : "bg-none text-primary"
+              }`
             }
           >
             Home
@@ -103,9 +105,11 @@ function Navbar() {
           <NavLink
             to="/menu"
             className={({ isActive }) =>
-              isActive
-                ? "block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
-                : "bg-none"
+              `block w-screen font-poppins font-medium text-center py-4 ${
+                isActive
+                  ? "bg-gradient-to-r from-primary/50 via-primary to-primary/50 text-base"
+                  : "bg-none text-primary"
+              }`
             }
           >
             Menu
@@ -115,9 +119,11 @@ function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive
-                ? "block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
-                : "bg-none"
+              `block w-screen font-poppins font-medium text-center py-4 ${
+                isActive
+                  ? "bg-gradient-to-r from-primary/50 via-primary to-primary/50 text-base"
+                  : "bg-none text-primary"
+              }`
             }
           >
             Contact
