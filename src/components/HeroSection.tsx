@@ -33,7 +33,7 @@ function HeroSection() {
       </div>
       <div className="absolute xl:bottom-0 xl:right-[130px] mt-[500px] xl:mt-0 xl:inline flex justify-center w-full xl:w-auto">
         <img
-          src="./src/assets/images/hero-img.png"
+          src="./images/hero-img.png"
           alt=""
           className="relative z-10 xl:size-[calc(9.4/10*100%)] w-[300px] rounded-t-full"
         />

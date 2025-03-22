@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,7 +57,7 @@ function Navbar() {
           </ul>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex flex-col justify-between w-6 h-5 focus:outline-none"
+            className="xl:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
           >
             <span
               className={`block h-[2px] w-7 bg-secondary transform transition-transform duration-300 ease-in-out origin-top-left ${
@@ -88,28 +88,40 @@ function Navbar() {
         }`}
       >
         <li>
-          <Link
+          <NavLink
             to="/"
-            className="block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
+            className={({ isActive }) =>
+              isActive
+                ? "block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
+                : "bg-none"
+            }
           >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/menu"
-            className="block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
+            className={({ isActive }) =>
+              isActive
+                ? "block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
+                : "bg-none"
+            }
           >
             Menu
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/contact"
-            className="block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
+            className={({ isActive }) =>
+              isActive
+                ? "block w-screen bg-gradient-to-r from-primary/50 via-primary to-primary/50 py-[20px] text-[18px] text-base font-poppins font-medium text-center"
+                : "bg-none"
+            }
           >
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </>

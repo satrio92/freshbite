@@ -32,17 +32,17 @@ function Footer() {
           className="flex items-center xl:gap-[42px] gap-[16px]"
         >
           <img
-            src="./src/assets/images/icons/twitter.svg"
+            src="./images/icons/twitter.svg"
             alt=""
             className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
           />
           <img
-            src="./src/assets/images/icons/instagram.svg"
+            src="./images/icons/instagram.svg"
             alt=""
             className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
           />
           <img
-            src="./src/assets/images/icons/tiktok.svg"
+            src="./images/icons/tiktok.svg"
             alt=""
             className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
           />

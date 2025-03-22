@@ -21,7 +21,7 @@ function AboutSection() {
       </div>
       <div className="relative">
         <img
-          src="./src/assets/images/freshbite-front.png"
+          src="./images/freshbite-front.png"
           alt=""
           className="relative xl:rounded-[21px] rounded-[10px] z-10 xl:w-auto w-[320px] h-[220px] xl:h-auto"
         />

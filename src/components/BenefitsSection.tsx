@@ -10,7 +10,7 @@ function BenefitsSection() {
       <div className="xl:w-[2px] w-full xl:h-[335px] h-[2px] bg-base/70 mt-[40px]"></div>
       <div className="xl:w-[351px] w-full xl:h-auto h-[360px] overflow-hidden flex justify-center relative group cursor-default">
         <img
-          src="./src/assets/images/benefits/fresh-ingredients.png"
+          src="./images/benefits/fresh-ingredients.png"
           alt=""
           className="xl:w-auto w-full h-[310px] saturate-0 group-hover:saturate-100 transition-all ease-in-out duration-300"
         />
@@ -21,7 +21,7 @@ function BenefitsSection() {
       <div className="xl:w-[2px] w-[calc(100%-12px)] xl:h-[335px] h-[2px] bg-base/70 mt-[40px]"></div>
       <div className="xl:w-[351px] w-full xl:h-auto h-[360px] overflow-hidden flex justify-center relative group cursor-default">
         <img
-          src="./src/assets/images/benefits/homemade-with-love.png"
+          src="./images/benefits/homemade-with-love.png"
           alt=""
           className="xl:w-auto w-full h-[310px] saturate-0 group-hover:saturate-100 transition-all ease-in-out duration-300"
         />
@@ -32,7 +32,7 @@ function BenefitsSection() {
       <div className="xl:w-[2px] w-full xl:h-[335px] h-[2px] bg-base/70 mt-[40px]"></div>
       <div className="xl:w-[351px] w-full xl:h-auto h-[360px] overflow-hidden flex justify-center relative group cursor-default">
         <img
-          src="./src/assets/images/benefits/affordable-price.png"
+          src="./images/benefits/affordable-price.png"
           alt=""
           className="xl:w-auto w-full h-[310px] saturate-0 group-hover:saturate-100 transition-all ease-in-out duration-300"
         />
