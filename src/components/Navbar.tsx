@@ -10,6 +10,7 @@ function Navbar() {
           isOpen ? "fixed z-60 top-0" : "static"
         }`}
         data-aos={`${isOpen ? "" : "fade-down"}`}
+        data-aos-offset="100"
       >
         <div
           id="nav-main"
