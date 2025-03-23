@@ -10,7 +10,6 @@ function Navbar() {
           isOpen ? "fixed z-60 top-0" : "static"
         }`}
         data-aos={`${isOpen ? "" : "fade-down"}`}
-        data-aos-offset="300"
       >
         <div
           id="nav-main"
@@ -70,7 +69,12 @@ function Navbar() {
             </li>
           </ul>
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              if (!isOpen) {
+                window.location.reload();
+              }
+            }}
             className="xl:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
           >
             <span
