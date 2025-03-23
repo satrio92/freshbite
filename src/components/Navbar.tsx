@@ -9,7 +9,7 @@ function Navbar() {
         className={`flex justify-center w-full pl-[24px] py-12 xl:pl-0 ${
           isOpen ? "fixed z-60 top-0" : "static"
         }`}
-        data-aos="fade-down"
+        data-aos={`${isOpen ? "" : "fade-down"}`}
       >
         <div
           id="nav-main"

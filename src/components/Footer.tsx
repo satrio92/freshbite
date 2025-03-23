@@ -40,26 +40,35 @@ function Footer() {
           data-aos-offset="-100"
           data-aos-delay="200"
         >
-          <img
-            src="./images/icons/twitter.svg"
-            alt=""
-            className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
-          />
-          <img
-            src="./images/icons/instagram.svg"
-            alt=""
-            className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
-          />
-          <img
-            src="./images/icons/tiktok.svg"
-            alt=""
-            className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
-          />
+          <a href="#footer">
+            <img
+              src="./images/icons/twitter.svg"
+              alt=""
+              className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
+            />
+          </a>
+          <a href="#footer">
+            <img
+              src="./images/icons/instagram.svg"
+              alt=""
+              className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
+            />
+          </a>
+          <a href="#footer">
+            <img
+              src="./images/icons/tiktok.svg"
+              alt=""
+              className="xl:w-[20px] xl:h-[20px] w-[16px] h-[16px]"
+            />
+          </a>
         </div>
       </div>
       <p
         id="copyright-mb"
         className="xl:hidden xl:text-[14px] text-[10px] text-base font-poppins text-center"
+        data-aos="fade-up"
+        data-aos-offset="-100"
+        data-aos-delay="100"
       >
         © 2025 FreshBite Bakery & Coffee. All Rights Reserved.
       </p>

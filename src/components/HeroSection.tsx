@@ -42,6 +42,7 @@ function HeroSection() {
       <div
         className="absolute xl:bottom-0 xl:right-[130px] mt-[500px] xl:mt-0 xl:inline flex justify-center w-full xl:w-auto"
         data-aos="fade-up"
+        data-aos-offset="-100"
       >
         <img
           src="./images/hero-img.png"
