@@ -8,6 +8,9 @@ function Footer() {
         <div
           id="logo"
           className="xl:text-[20px] text-[13px] text-base font-syncopate font-bold flex gap-[12px] items-center"
+          data-aos="fade-up"
+          data-aos-offset="-100"
+          data-aos-delay="0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,12 +27,18 @@ function Footer() {
         <p
           id="copyright"
           className="hidden xl:inline text-[14px] text-base font-poppins"
+          data-aos="fade-up"
+          data-aos-offset="-100"
+          data-aos-delay="100"
         >
           © 2025 FreshBite Bakery & Coffee. All Rights Reserved.
         </p>
         <div
           id="social-media"
           className="flex items-center xl:gap-[42px] gap-[16px]"
+          data-aos="fade-up"
+          data-aos-offset="-100"
+          data-aos-delay="200"
         >
           <img
             src="./images/icons/twitter.svg"

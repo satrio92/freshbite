@@ -4,7 +4,10 @@ function AboutSection() {
       id="about"
       className="xl:h-[calc(100vh-160px)] h-auto bg-base flex flex-col xl:flex-row justify-center items-center xl:gap-[80px] gap-[52px] px-[24px] xl:px-0 pt-[60px] xl-pt-0"
     >
-      <div className="flex flex-col gap-[22px] xl:w-[565px] w-full">
+      <div
+        className="flex flex-col gap-[22px] xl:w-[565px] w-full"
+        data-aos="fade-right"
+      >
         <h2 className="xl:text-[52px] text-[28px] text-primary font-syncopate font-bold text-center xl:text-start">
           about us
         </h2>
@@ -19,7 +22,7 @@ function AboutSection() {
           terjangkau.
         </p>
       </div>
-      <div className="relative">
+      <div className="relative" data-aos="fade-left">
         <img
           src="./images/freshbite-front.png"
           alt=""

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +9,7 @@ function Navbar() {
         className={`flex justify-center w-full pl-[24px] py-12 xl:pl-0 ${
           isOpen ? "fixed z-60 top-0" : "static"
         }`}
+        data-aos="fade-down"
       >
         <div
           id="nav-main"

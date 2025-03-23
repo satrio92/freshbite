@@ -3,6 +3,7 @@ interface ReviewCardProps {
   comment: string;
   profession: string;
   image: string;
+  i: number;
 }
 
 const ReviewCard: React.FC<ReviewCardProps> = ({
@@ -10,9 +11,14 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   comment,
   profession,
   image,
+  i,
 }) => {
   return (
-    <div className="xl:w-[419px] w-[calc(419px/100*78)] xl:h-[327px] h-auto rounded-[24px] border-2 border-primary bg-base overflow-hidden relative flex flex-col hover:-rotate-2 transition-all duration-150 ease-in">
+    <div
+      className="xl:w-[419px] w-[calc(419px/100*78)] xl:h-[327px] h-auto rounded-[24px] border-2 border-primary bg-base overflow-hidden relative flex flex-col hover:-rotate-2 transition-all duration-150 ease-in"
+      data-aos="fade-up"
+      data-aos-delay={`${i * 150}`}
+    >
       <img
         src="./images/quote-icon-bg.png"
         alt=""

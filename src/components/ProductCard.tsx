@@ -3,6 +3,7 @@ interface ProductCardProps {
   name: string;
   description: string;
   image: string;
+  i: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({
@@ -10,11 +11,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
   name,
   image,
   description,
+  i,
 }) => {
   return (
     <div
       key={key}
       className="product-card flex flex-col xl:gap-[21px] gap-[12px]"
+      data-aos="fade-up"
+      data-aos-delay={`${(i % 3) * 150}`}
     >
       <div className="xl:w-[314px] w-[calc(314px*51/100)] xl:h-[268px] h-[calc(268px*51/100)] xl:rounded-[12px] rounded-[calc(12px/100*75)] overflow-hidden">
         <img src={image} alt="" className="w-full h-full" />

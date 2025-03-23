@@ -4,11 +4,17 @@ function ContactSection() {
       id="all-product"
       className="w-full xl:h-[calc(100vh*2)] h-auto bg-base flex flex-col items-center xl:gap-[90px] gap-[40px] pt-[90px] px-[30px] xl:px-0 pb-[64px] xl:pb-0"
     >
-      <h2 className="xl:text-[52px] text-[28px] text-primary font-syncopate font-bold text-center">
+      <h2
+        className="xl:text-[52px] text-[28px] text-primary font-syncopate font-bold text-center"
+        data-aos="fade-up"
+      >
         contact us
       </h2>
       <div className="w-full xl:w-auto flex flex-col xl:flex-row items-center gap-[30px]">
-        <div className="xl:w-[800px] w-full xl:h-[706px] h-auto border-2 border-primary rounded-[20px] xl:px-[54px] px-[24px] py-[32px] xl:py-0 flex flex-col xl:gap-[43px] gap-[28px] justify-center">
+        <div
+          className="xl:w-[800px] w-full xl:h-[706px] h-auto border-2 border-primary rounded-[20px] xl:px-[54px] px-[24px] py-[32px] xl:py-0 flex flex-col xl:gap-[43px] gap-[28px] justify-center"
+          data-aos="fade-right"
+        >
           <div className="flex flex-col gap-[4px]">
             <h4 className="xl:text-[28px] text-[18px] text-primary font-poppins font-semibold">
               Send us a message
@@ -64,7 +70,10 @@ function ContactSection() {
             ></textarea>
           </div>
         </div>
-        <div className="xl:w-[428px] w-full xl:h-[706px] h-auto border-2 border-primary rounded-[20px] bg-secondary px-[52px]">
+        <div
+          className="xl:w-[428px] w-full xl:h-[706px] h-auto border-2 border-primary rounded-[20px] bg-secondary px-[52px]"
+          data-aos="fade-left"
+        >
           <h4 className="xl:text-[20px] text-[16px] text-base font-medium font-poppins xl:h-[calc((100%-((143px*3)+4px))/2)] flex items-center py-[36px] xl:py-0">
             Hi! we are always here to help you
           </h4>

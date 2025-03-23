@@ -29,12 +29,16 @@ function PopularMenu() {
       id="popular-product"
       className="w-full xl:h-[calc(100vh*2)] h-auto bg-base flex flex-col items-center xl:gap-[90px] gap-[40px] pt-[90px] pb-[64px] xl:pb-[90px]"
     >
-      <h2 className="xl:text-[52px] text-[28px] text-primary font-syncopate font-bold text-center">
+      <h2
+        className="xl:text-[52px] text-[28px] text-primary font-syncopate font-bold text-center"
+        data-aos="fade-up"
+      >
         our popular menu
       </h2>
       <div className="w-full flex justify-center xl:gap-[120px] gap-[calc(120px/100*15)] flex-wrap">
-        {products.map((product) => (
+        {products.map((product, index) => (
           <ProductCard
+            i={index}
             key={product._id}
             name={product.name}
             description={product.description}
