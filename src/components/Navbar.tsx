@@ -71,7 +71,7 @@ function Navbar() {
           <button
             onClick={() => {
               setIsOpen(!isOpen);
-              if (isOpen == false) {
+              if (isOpen == true) {
                 window.location.reload();
               }
             }}
