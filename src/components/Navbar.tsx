@@ -1,26 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"; // Disable scroll saat menu aktif
-    } else {
-      document.body.style.overflow = "auto"; // Enable scroll kembali saat menu ditutup
-    }
-
-    return () => {
-      document.body.style.overflow = "auto"; // Reset jika component unmount
-    };
-  }, [isOpen]);
   return (
     <>
       <nav
+        id="nav"
         className={`flex justify-center w-full pl-[24px] py-12 xl:pl-0 ${
           isOpen ? "fixed z-60 top-0" : "static"
         }`}
-        data-aos={`${isOpen ? "" : "fade-down"}`}
+        data-aos="fade-down"
       >
         <div
           id="nav-main"
@@ -80,7 +70,13 @@ function Navbar() {
             </li>
           </ul>
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              const navElement = document.querySelector("#nav");
+              if (navElement) {
+                navElement.setAttribute("data-aos", "");
+              }
+            }}
             className="xl:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
           >
             <span
