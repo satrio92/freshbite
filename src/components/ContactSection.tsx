@@ -1,4 +1,39 @@
+import { useForm, ValidationError } from "@formspree/react";
+import { useState } from "react";
+
 function ContactSection() {
+  const [state, handleSubmit] = useForm("mjkyrbpp");
+  const [formSuccess, setFormSuccess] = useState(false);
+  if (formSuccess) {
+    return (
+      <div className="w-full h-[calc(100vh-135px)] bg-base flex flex-col justify-center items-center gap-[44px]">
+        <p className="text-[16px] xl:text-[24px] text-primary font-syncopate font-bold">
+          Thanks for submitting a message!
+        </p>
+        <button
+          onClick={() => setFormSuccess(false)}
+          className="flex gap-[24px] py-[16px] px-[40px] rounded-[10px] border-2 border-primary"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="23"
+            viewBox="0 0 35 23"
+            fill="none"
+          >
+            <path
+              d="M10.5559 2.56538C11.1443 1.98221 11.1486 1.03248 10.5654 0.444083C9.98222 -0.144311 9.03248 -0.148549 8.44408 0.434618L4.85462 3.9922C3.50268 5.33208 2.39772 6.42718 1.61411 7.40292C0.799255 8.41757 0.20939 9.44745 0.0518181 10.6837C-0.0172727 11.2257 -0.0172727 11.7743 0.0518179 12.3163C0.20939 13.5526 0.799255 14.5824 1.61411 15.5971C2.39773 16.5728 3.50268 17.6679 4.85464 19.0078L8.44408 22.5654C9.03248 23.1485 9.98221 23.1443 10.5654 22.5559C11.1485 21.9675 11.1443 21.0178 10.5559 20.4346L7.02998 16.94C5.59899 15.5217 4.61739 14.5456 3.95319 13.7186C3.73733 13.4498 3.56892 13.2132 3.43816 13H33.5C34.3284 13 35 12.3284 35 11.5C35 10.6716 34.3284 10 33.5 10H3.43816C3.56892 9.7868 3.73733 9.55019 3.95319 9.28141C4.61739 8.45436 5.59899 7.47827 7.02998 6.06L10.5559 2.56538Z"
+              fill="#345230"
+            />
+          </svg>
+          <p className="text-[18px[ text-primary font-syncopate font-bold">
+            Back
+          </p>
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div
       id="all-product"
@@ -11,7 +46,16 @@ function ContactSection() {
         contact us
       </h2>
       <div className="w-full xl:w-auto flex flex-col xl:flex-row items-center gap-[30px]">
-        <div
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            handleSubmit(event).then(() => {
+              if (state.succeeded) {
+                setFormSuccess(true);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            });
+          }}
           className="xl:w-[800px] w-full xl:h-[706px] h-auto border-2 border-primary rounded-[20px] xl:px-[54px] px-[24px] py-[32px] xl:py-0 flex flex-col xl:gap-[43px] gap-[28px] justify-center"
           data-aos="fade-right"
         >
@@ -38,7 +82,9 @@ function ContactSection() {
               id="name"
               className="border-[1.5px] border-primary rounded-[6px] xl:h-[57px] h-[45px] px-[12px] text-primary xl:text-[17px] text-[13px]"
               placeholder="nama"
+              required
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="flex flex-col xl:gap-[12px] gap-[8px]">
             <label
@@ -53,6 +99,12 @@ function ContactSection() {
               id="email"
               className="border-[1.5px] border-primary rounded-[6px] xl:h-[57px] h-[45px] px-[12px] text-primary xl:text-[17px] text-[13px]"
               placeholder="email"
+              required
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </div>
           <div className="flex flex-col xl:gap-[12px] gap-[8px]">
@@ -67,9 +119,22 @@ function ContactSection() {
               id="message"
               className="border-[1.5px] border-primary rounded-[6px] h-[116px] px-[12px] py-[6px] text-primary xl:text-[17px] text-[13px]"
               placeholder="message"
+              required
             ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
-        </div>
+          <button
+            type="submit"
+            disabled={state.submitting}
+            className="bg-primary text-base py-[8px] text-[18px] w-[140px] rounded-[3px]"
+          >
+            Submit
+          </button>
+        </form>
         <div
           className="xl:w-[428px] w-full xl:h-[706px] h-auto border-2 border-primary rounded-[20px] bg-secondary px-[52px]"
           data-aos="fade-left"

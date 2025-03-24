@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"; // Disable scroll saat menu mobile terbuka
+    } else {
+      document.body.style.overflow = "auto"; // Restore scroll saat menu tertutup
+    }
+  }, [isOpen]);
   return (
     <>
       <nav
@@ -69,12 +76,7 @@ function Navbar() {
             </li>
           </ul>
           <button
-            onClick={() => {
-              setIsOpen(!isOpen);
-              if (isOpen == true) {
-                window.location.reload();
-              }
-            }}
+            onClick={() => setIsOpen(!isOpen)}
             className="xl:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
           >
             <span
