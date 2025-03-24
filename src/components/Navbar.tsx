@@ -5,10 +5,14 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden"; // Disable scroll saat menu mobile terbuka
+      document.body.style.overflow = "hidden"; // Disable scroll saat menu aktif
     } else {
-      document.body.style.overflow = "auto"; // Restore scroll saat menu tertutup
+      document.body.style.overflow = "auto"; // Enable scroll kembali saat menu ditutup
     }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Reset jika component unmount
+    };
   }, [isOpen]);
   return (
     <>
