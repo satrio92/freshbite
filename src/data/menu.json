@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Velvet Cloud Cappuccino",
+    "description": "Perpaduan espresso, susu steamed, dan foam creamy untuk rasa yang lembut dan kaya.",
+    "price": 22000,
+    "featured": true,
+    "type": "minuman"
+  },
+  {
+    "name": "Choco Bliss Mocha",
+    "description": "Kombinasi espresso, cokelat, dan susu steamed untuk rasa manis yang menggoda.",
+    "price": 22000,
+    "featured": true,
+    "type": "minuman"
+  },
+  {
+    "name": "Silky Dream Latte",
+    "description": "Espresso dengan campuran susu steamed yang creamy, lebih ringan dibanding cappuccino.",
+    "price": 22000,
+    "featured": true,
+    "type": "minuman"
+  },{
+  "name": "Cinnamon Swirl Bliss",
+  "description": "Roti gulung dengan kayu manis, gula, dan glaze manis yang meleleh di mulut.",
+  "price": 22000,
+  "featured": true,
+  "type": "makanan"
+},{
+  "name": "Royal Danish Delight",
+  "description": "Pastry dengan berbagai isian, mulai dari cokelat, keju, hingga buah segar.",
+  "price": 22000,
+  "featured": true,
+  "type": "makanan"
+},{
+  "name": "Golden Flake Croissant",
+  "description": "Roti lapis bertekstur renyah dengan aroma mentega yang khas.",
+  "price": 22000,
+  "featured": true,
+  "type": "makanan"
+}
+]
